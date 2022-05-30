@@ -1,4 +1,3 @@
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -44,18 +43,5 @@ public class NasaResponse {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    static class Entity {
-        public String copyright;
-        public String date;
-        public String explanation;
-        public String hdurl;
-        @JsonProperty("media_type")
-        public String mediaType;
-        @JsonProperty("service_version")
-        public String serviceVersion;
-        public String title;
-        public String url;
     }
 }
